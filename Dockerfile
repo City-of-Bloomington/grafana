@@ -13,5 +13,4 @@ RUN apt-get update && apt-get install -y apt-transport-https software-properties
 COPY run.sh /run.sh
 
 EXPOSE 3000
-USER grafana:grafana
 ENTRYPOINT ["/run.sh"]

@@ -1,0 +1,39 @@
+---
+replicaCount: 1
+
+image:
+  repository: 'grafana/grafana'
+  tag:        'latest'
+  pullPolicy: 'Always'
+
+# Configuration values for /etc/grafana/grafana.ini
+config:
+  server:
+    domain:
+    root_url:
+  database:
+    type:
+    host:
+    name:
+    user:
+    pass:
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host:
+      paths: []
+
+  tls:
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+...
