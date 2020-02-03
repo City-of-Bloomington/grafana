@@ -28,7 +28,11 @@ data:
     allow_org_create = false
 
     [auth.anonymous]
-    enabled = true
+    enabled  = true
     org_role = Viewer
+    org_name = City of Bloomington
+
+    [log]
+    mode = console
 
 ...
